@@ -1,0 +1,238 @@
+#overallDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+
+
+button{
+    font-size: larger;
+    font-style: italic;
+    color: rgb(54, 53, 53);
+    border: none;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: darkseagreen;
+}
+p{
+    font-size: larger;
+    font-style: italic;
+}
+
+
+
+
+
+
+#hintCalculatorInfoDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+#hintDiv{
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(161, 161, 161);
+    background-color: rgb(243, 238, 238);;
+}
+#infoDiv{
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(161, 161, 161);
+    background-color: rgb(243, 238, 238);
+}
+
+
+
+
+
+
+
+
+#calculatorDiv{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    padding: 15px;
+    gap: 8px;
+    box-shadow: 4px 4px 4px 4px rgb(161, 161, 161);
+    background-color: rgb(231, 228, 228);
+    border-radius: 20px;
+}
+#logoDateEditionDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: grey;
+}
+#outputDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: pink;
+;
+}
+#displayDiv{
+    width: 99%;
+    height: 60px;
+    color: black;
+    padding-left: 3px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(161, 161, 161);
+    background-color: floralwhite;
+}
+#displayDiv1{
+    width: 99%;
+    height: 60px;
+    color: black;
+    padding-left: 3px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(161, 161, 161);
+    background-color: floralwhite;
+}
+#buttonDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: pink;
+}
+#symbolButtonDiv{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+.symbolButtonDiv{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(194, 184, 44);
+}
+#numberSignButtonDiv{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: space-evenly;
+    border-radius: 30px;
+}
+#numberButtonDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px rgb(161, 161, 161);
+    background-color: blanchedalmond;
+}
+.numberButtonDiv{
+    width: 50px;
+    height: 40px;
+    background-color: #32cd32;
+}
+#numberButton789Div{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+}
+#numberButton456Div{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+}
+#numberButton123Div{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+}
+#numberButton0Dot00Div{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+}
+#signButtonDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px 1px rgb(161, 161, 161);
+    background-color: blanchedalmond;
+}
+.signButtonDiv{
+    width: 50px;
+    height: 30px;
+    background-color: #ebf707;
+}
+#signAddSubtractButtonDiv{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+}
+#signMultiplyDivideButtonDiv{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+}
+
+
+#equalToButtonDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+}
+#equalToButtonDiv button{
+    width: 300px;
+    height: 40px;
+    box-shadow: 1px 1px 1px 1px rgb(161, 161, 161);
+    background-color: rgb(204, 145, 204);
+}
+#equalToButtonDiv button:hover{
+    background-color: darkseagreen;
+}
+
+
+
+
+
+
+
+#footerDiv{
+    text-align: center;
+    font-size: smaller;
+    margin-top: 10px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-top: 1px solid rgb(170, 170, 170);
+}
