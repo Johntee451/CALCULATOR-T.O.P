@@ -28,9 +28,12 @@ function multiply(num1,num2,operator) {
 //division Function:
 function divide(num1,num2,operator) {
     let result;
-    if (operator === "/") {
+    if (operator === "/" && num2 !== 0) {
         result = (num1) / (num2);
         return (result);
+    }
+    else{
+        return ("Cannot divide by zero");
     }
 }
 
@@ -227,7 +230,6 @@ signButtonEqualtoDiv.addEventListener("click", function(){
 
         displayParaDiv.textContent = subtract(Number(number1),Number(number2),sign);
         displayParaDiv1.textContent = subtract(Number(number1),Number(number2),sign);
-        console.log(subtract(Number(number1),Number(number2),sign));
     }
 
     else if (displayContent.includes("+", 1)) {
@@ -238,7 +240,6 @@ signButtonEqualtoDiv.addEventListener("click", function(){
 
         displayParaDiv.textContent = add(Number(number1),Number(number2),sign);
         displayParaDiv1.textContent = add(Number(number1),Number(number2),sign);
-        console.log(add(Number(number1),Number(number2),sign));
     }
 
     else if (displayContent.includes("*", 1)) {
@@ -249,7 +250,6 @@ signButtonEqualtoDiv.addEventListener("click", function(){
 
         displayParaDiv.textContent = multiply(Number(number1),Number(number2),sign);
         displayParaDiv1.textContent = multiply(Number(number1),Number(number2),sign);
-        console.log(multiply(Number(number1),Number(number2),sign));
     }
 
     else if (displayContent.includes("/", 1)) {
@@ -260,7 +260,6 @@ signButtonEqualtoDiv.addEventListener("click", function(){
 
         displayParaDiv.textContent = divide(Number(number1),Number(number2),sign);
         displayParaDiv1.textContent = divide(Number(number1),Number(number2),sign);
-        console.log(divide(Number(number1),Number(number2),sign));
     }
     
 })
