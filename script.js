@@ -117,7 +117,26 @@ button00Div.addEventListener("click", function(){
     displayParaDiv.textContent += button00Div.textContent;
 })
 buttonDotDiv.addEventListener("click", function(){
-    displayParaDiv.textContent += buttonDotDiv.textContent;
+    let displayContent = displayParaDiv.textContent;
+    //displayParaDiv.textContent += "0" + buttonDotDiv.textContent;
+    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷" && displayContent[displayContent.length-1] !== ".") {
+        displayParaDiv.textContent += buttonDotDiv.textContent;
+    }
+    else if(displayContent === "" || displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "x" || displayContent[displayContent.length-1] === "÷"){
+        displayParaDiv.textContent += "0"+ buttonDotDiv.textContent;
+    }
+    else{
+        displayParaDiv.textContent += "";
+    }
+    /* else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "x" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === ".") {
+        let dispCont = displayParaDiv.textContent;
+        let arrDisp = dispCont.split("");
+        arrDisp.pop();
+        arrDisp.push(buttonDotDiv.textContent);
+        let joinDisp = arrDisp.join("");
+        displayParaDiv.textContent = joinDisp;
+    } */
+    //displayParaDiv.textContent += buttonDotDiv.textContent;
 })
 
 
@@ -153,10 +172,10 @@ clearSymbolDiv.addEventListener("click", function(){
 //sign input buttons
 signButtonAdditionDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
-    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷") {
+    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷" && displayContent[displayContent.length-1] !== ".") {
         displayParaDiv.textContent += signButtonAdditionDiv.textContent;
     }
-    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "x" || displayContent[displayContent.length-1] === "÷") {
+    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "x" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === ".") {
         let dispCont = displayParaDiv.textContent;
         let arrDisp = dispCont.split("");
         arrDisp.pop();
@@ -168,10 +187,10 @@ signButtonAdditionDiv.addEventListener("click", function(){
 
 signButtonSubtractionDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
-    if (displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+") {
+    if (displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== ".") {
         displayParaDiv.textContent += signButtonSubtractionDiv.textContent;
     }
-    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+") {
+    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === ".") {
         let dispCont = displayParaDiv.textContent;
         let arrDisp = dispCont.split("");
         arrDisp.pop();
@@ -183,10 +202,10 @@ signButtonSubtractionDiv.addEventListener("click", function(){
 
 signButtonMultiplicationDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
-    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷") {
+    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷" && displayContent[displayContent.length-1] !== ".") {
         displayParaDiv.textContent += signButtonMultiplicationDiv.textContent;
     }
-    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === "x") {
+    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === "x" || displayContent[displayContent.length-1] === ".") {
         let dispCont = displayParaDiv.textContent;
         let arrDisp = dispCont.split("");
         arrDisp.pop();
@@ -198,10 +217,10 @@ signButtonMultiplicationDiv.addEventListener("click", function(){
 
 signButtonDivisionDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
-    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷") {
+    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷" && displayContent[displayContent.length-1] !== ".") {
         displayParaDiv.textContent += signButtonDivisionDiv.textContent;
     }
-    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === "x") {
+    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === "x" || displayContent[displayContent.length-1] === ".") {
         let dispCont = displayParaDiv.textContent;
         let arrDisp = dispCont.split("");
         arrDisp.pop();
