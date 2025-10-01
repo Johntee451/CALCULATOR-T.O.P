@@ -19,7 +19,7 @@ function subtract(num1,num2,operator) {
 //multiplication Function:
 function multiply(num1,num2,operator) {
     let result;
-    if (operator === "*") {
+    if (operator === "x") {
         result = (num1) * (num2);
         return (result);
     }
@@ -28,7 +28,7 @@ function multiply(num1,num2,operator) {
 //division Function:
 function divide(num1,num2,operator) {
     let result;
-    if (operator === "/" && num2 !== 0) {
+    if (operator === "÷" && num2 !== 0) {
         result = (num1) / (num2);
         return (result);
     }
@@ -153,10 +153,10 @@ clearSymbolDiv.addEventListener("click", function(){
 //sign input buttons
 signButtonAdditionDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
-    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "*" && displayContent[displayContent.length-1] !== "/") {
+    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷") {
         displayParaDiv.textContent += signButtonAdditionDiv.textContent;
     }
-    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "*" || displayContent[displayContent.length-1] === "/") {
+    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "x" || displayContent[displayContent.length-1] === "÷") {
         let dispCont = displayParaDiv.textContent;
         let arrDisp = dispCont.split("");
         arrDisp.pop();
@@ -183,10 +183,10 @@ signButtonSubtractionDiv.addEventListener("click", function(){
 
 signButtonMultiplicationDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
-    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "*" && displayContent[displayContent.length-1] !== "/") {
+    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷") {
         displayParaDiv.textContent += signButtonMultiplicationDiv.textContent;
     }
-    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "/" || displayContent[displayContent.length-1] === "*") {
+    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === "x") {
         let dispCont = displayParaDiv.textContent;
         let arrDisp = dispCont.split("");
         arrDisp.pop();
@@ -198,10 +198,10 @@ signButtonMultiplicationDiv.addEventListener("click", function(){
 
 signButtonDivisionDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
-    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "*" && displayContent[displayContent.length-1] !== "/") {
+    if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷") {
         displayParaDiv.textContent += signButtonDivisionDiv.textContent;
     }
-    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "/" || displayContent[displayContent.length-1] === "*") {
+    else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === "x") {
         let dispCont = displayParaDiv.textContent;
         let arrDisp = dispCont.split("");
         arrDisp.pop();
@@ -222,7 +222,7 @@ signButtonDivisionDiv.addEventListener("click", function(){
 signButtonEqualtoDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
 
-    if (displayContent.includes("-", 1) && !(displayContent.includes("*-", 1)) && !(displayContent.includes("/-", 1))) {
+    if (displayContent.includes("-", 1) && !(displayContent.includes("x-", 1)) && !(displayContent.includes("÷-", 1))) {
         let signIndex = displayContent.indexOf("-", 1);
         number1 = displayContent.slice(0, signIndex);
         sign = displayContent[signIndex];
@@ -242,8 +242,8 @@ signButtonEqualtoDiv.addEventListener("click", function(){
         displayParaDiv1.textContent = add(Number(number1),Number(number2),sign);
     }
 
-    else if (displayContent.includes("*", 1)) {
-        let signIndex = displayContent.indexOf("*", 1);
+    else if (displayContent.includes("x", 1)) {
+        let signIndex = displayContent.indexOf("x", 1);
         number1 = displayContent.slice(0, signIndex);
         sign = displayContent[signIndex];
         number2 = displayContent.slice(signIndex+1, displayContent.length);
@@ -252,8 +252,8 @@ signButtonEqualtoDiv.addEventListener("click", function(){
         displayParaDiv1.textContent = multiply(Number(number1),Number(number2),sign);
     }
 
-    else if (displayContent.includes("/", 1)) {
-        let signIndex = displayContent.indexOf("/", 1);
+    else if (displayContent.includes("÷", 1)) {
+        let signIndex = displayContent.indexOf("÷", 1);
         number1 = displayContent.slice(0, signIndex);
         sign = displayContent[signIndex];
         number2 = displayContent.slice(signIndex+1, displayContent.length);
