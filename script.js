@@ -81,7 +81,6 @@ let signButtonDivisionDiv = document.querySelector("#signButtonDivisionDiv");
 let signButtonEqualtoDiv = document.querySelector("#signButtonEqualtoDiv");
 
 
-
 //number buttons
 button1Div.addEventListener("click", function(){
     displayParaDiv.textContent += button1Div.textContent;
@@ -247,7 +246,7 @@ signButtonEqualtoDiv.addEventListener("click", function(){
         sign = displayContent[signIndex];
         number2 = displayContent.slice(signIndex+1, displayContent.length);
 
-        displayParaDiv.textContent = subtract(Number(number1),Number(number2),sign);
+        displayParaDiv.textContent = "";
         displayParaDiv1.textContent = subtract(Number(number1),Number(number2),sign);
     }
 
@@ -257,7 +256,7 @@ signButtonEqualtoDiv.addEventListener("click", function(){
         sign = displayContent[signIndex];
         number2 = displayContent.slice(signIndex+1, displayContent.length);
 
-        displayParaDiv.textContent = add(Number(number1),Number(number2),sign);
+        displayParaDiv.textContent = "";
         displayParaDiv1.textContent = add(Number(number1),Number(number2),sign);
     }
 
@@ -267,7 +266,7 @@ signButtonEqualtoDiv.addEventListener("click", function(){
         sign = displayContent[signIndex];
         number2 = displayContent.slice(signIndex+1, displayContent.length);
 
-        displayParaDiv.textContent = multiply(Number(number1),Number(number2),sign);
+        displayParaDiv.textContent = "";
         displayParaDiv1.textContent = multiply(Number(number1),Number(number2),sign);
     }
 
@@ -277,8 +276,11 @@ signButtonEqualtoDiv.addEventListener("click", function(){
         sign = displayContent[signIndex];
         number2 = displayContent.slice(signIndex+1, displayContent.length);
 
-        displayParaDiv.textContent = divide(Number(number1),Number(number2),sign);
+        displayParaDiv.textContent = "";
         displayParaDiv1.textContent = divide(Number(number1),Number(number2),sign);
     }
     
+    else if (displayContent === "") {
+        displayParaDiv.textContent = displayParaDiv1.textContent;
+    }
 })

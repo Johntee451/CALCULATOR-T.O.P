@@ -112,8 +112,10 @@ p{
 #buttonDiv{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 3px;
     padding: 5px;
+    font-size: x-large;
+    font-weight: bolder;
     border-radius: 30px;
     background-color: pink;
 }
@@ -127,7 +129,7 @@ p{
 }
 .symbolButtonDiv{
     width: 80px;
-    height: 30px;
+    height: 35px;
     background-color: rgb(194, 184, 44);
 }
 #numberSignButtonDiv{
@@ -187,7 +189,7 @@ p{
 }
 .signButtonDiv{
     width: 50px;
-    height: 30px;
+    height: 35px;
     background-color: #ebf707;
 }
 #signAddSubtractButtonDiv{
