@@ -117,7 +117,6 @@ button00Div.addEventListener("click", function(){
 })
 buttonDotDiv.addEventListener("click", function(){
     let displayContent = displayParaDiv.textContent;
-    //displayParaDiv.textContent += "0" + buttonDotDiv.textContent;
     if (displayContent !== "" && displayContent[displayContent.length-1] !== "-" && displayContent[displayContent.length-1] !== "+" && displayContent[displayContent.length-1] !== "x" && displayContent[displayContent.length-1] !== "÷" && displayContent[displayContent.length-1] !== ".") {
         displayParaDiv.textContent += buttonDotDiv.textContent;
     }
@@ -127,15 +126,6 @@ buttonDotDiv.addEventListener("click", function(){
     else{
         displayParaDiv.textContent += "";
     }
-    /* else if (displayContent[displayContent.length-1] === "-" || displayContent[displayContent.length-1] === "+" || displayContent[displayContent.length-1] === "x" || displayContent[displayContent.length-1] === "÷" || displayContent[displayContent.length-1] === ".") {
-        let dispCont = displayParaDiv.textContent;
-        let arrDisp = dispCont.split("");
-        arrDisp.pop();
-        arrDisp.push(buttonDotDiv.textContent);
-        let joinDisp = arrDisp.join("");
-        displayParaDiv.textContent = joinDisp;
-    } */
-    //displayParaDiv.textContent += buttonDotDiv.textContent;
 })
 
 
